@@ -1,0 +1,7 @@
+__pycache__
+data
+.vscode
+*pth
+flower_data
+test.py
+*json
