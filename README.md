@@ -1,6 +1,8 @@
 # DNN models for classification
 这个仓库是仓库作者用于托管练手模型的
+
 学习的大佬仓库为： https://github.com/WZMIAOMIAO/deep-learning-for-image-processing
+
 仓库作者还处于 **轮椅阶段**
 
 
