@@ -10,7 +10,8 @@
 1. [lenet](https://github.com/Carp2i/DNN-models-for-classification/tree/master/lenet)
 2. [alexnet](https://github.com/Carp2i/DNN-models-for-classification/tree/master/alexnet)
 3. [vgg](https://github.com/Carp2i/DNN-models-for-classification/tree/master/vgg)
-4. googLeNet(待完成)
+4. [googLeNet](https://github.com/Carp2i/DNN-models-for-classification/tree/master/googlenet)
+5. ResNet(待完成)
 
 ### LeNet
 这个模型经常被作为 [PyTorch](https://pytorch.org/get-started/locally/) 框架的 tutorial 模型，基本数据集会使用 FashionMNIST 或 cifar-10。
@@ -71,7 +72,8 @@ GoogLeNet：batch_size=96 **只用5.5GB**显存
 
 ![](https://pic.imgdb.cn/item/625bbebb239250f7c5a39959.jpg)
 
-
+### ResNet
+Coming soon
 
 ## dataset
 仓库的 root path 下有一个data文件夹，被我ignore了
