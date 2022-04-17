@@ -3,7 +3,7 @@
 
 学习的大佬仓库为： https://github.com/WZMIAOMIAO/deep-learning-for-image-processing
 
-仓库作者还处于 **轮椅阶段**
+仓库作者(我）还处于写pytorch的 **轮椅阶段**
 
 
 ## 目前已经更新
@@ -41,7 +41,7 @@
 ### Vgg
 非常Fat的网络（**指参数量特别大**），自己train出来的VGG16，只有75%左右的Validation acc，还是在ImageNet的数据集上，仓库作者的vgg16跑在 <u>花分类数据集</u> 上
 
-原论文 [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://readpaper.com/paper/1686810756)
+原论文： [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/abs/1409.1556)
 
 ![](https://pic.imgdb.cn/item/625a74b7239250f7c5a55bf9.jpg)
 
@@ -49,6 +49,28 @@
 ### GoogLenet
 致敬Lenet玩了一个谐音梗
 ...未完待续(2022/4/16)
+做完了 (2022/4/17)
+
+原论文：[Going Deeper with Convolutions](https://arxiv.org/abs/1409.4842)
+
+使用的显卡为 N卡2060-6GB的显卡，感觉过来和VGG的区别特别明显：
+VGG：batch_size=27 **显存吃满**
+GoogLeNet：batch_size=96 **只用5.5GB**显存
+
+根据计算，大概两个模型参数差了20倍
+
+
+#### Inception a/b
+![](https://pic.imgdb.cn/item/625bbe8c239250f7c5a34192.jpg)
+
+#### model structure
+
+![](https://pic.imgdb.cn/item/625bbea1239250f7c5a36586.jpg)
+
+#### layers table
+
+![](https://pic.imgdb.cn/item/625bbebb239250f7c5a39959.jpg)
+
 
 
 ## dataset
