@@ -73,7 +73,8 @@ GoogLeNet：batch_size=96 **只用5.5GB**显存
 ![](https://pic.imgdb.cn/item/625bbebb239250f7c5a39959.jpg)
 
 ### ResNet
-Coming soon
+
+写是已经写好了
 
 ## dataset
 仓库的 root path 下有一个data文件夹，被我ignore了
