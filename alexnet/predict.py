@@ -51,7 +51,7 @@ def main():
         # out = model(img.to(device))     # 输出 torch.Size([1, 5])
         # print(out.shape)
         output = torch.squeeze(model(img.to(device))).cpu() # 输出 torch.Size([5])
-        # print(output.shape)
+        print(output.shape)
 
         predict = torch.softmax(output, dim=0)
         predict_cla = torch.argmax(predict).numpy()

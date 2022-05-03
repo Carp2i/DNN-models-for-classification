@@ -71,6 +71,7 @@ def main():
 
 
     # # 检查验证集的代码
+    # 这里可以用 opencv 的方法查看样本
     # test_data_iter = iter(validate_loader)
     # test_image, test_label = test_data_iter.next()
 
@@ -87,7 +88,7 @@ def main():
 
     net.to(device)
     loss_function = nn.CrossEntropyLoss()
-    # pata = list(net.parameters()) # 调试用的，用来查看模型的参数
+    # para = list(net.parameters()) # 调试用的，用来查看模型的参数
     optimizer = optim.Adam(net.parameters(), lr=2e-4)   # 学习率是调试过的
 
     save_path = './AlexNet.pth'
@@ -96,7 +97,7 @@ def main():
     # train_num = len(train_dataset)
 
     for epoch in range(epoch_num):
-        # 模型的mode {train, eval} 会管理模型的 dropout和batchnorm层
+        # 模型的mode{train, eval} 会管理模型的dropout和batchnorm层
         net.train()
         running_loss = 0.0
         # 用来预测，训练时间
@@ -104,7 +105,8 @@ def main():
         train_bar = tqdm(train_loader, file=sys.stdout)
         for step, data in enumerate(train_bar):
             images, labels = data
-        
+            # images, labels = images.to(device), labels.to(device)
+
             # 梯度数据清空
             optimizer.zero_grad()
             outputs = net(images.to(device))
@@ -128,7 +130,7 @@ def main():
 
         # print()
         # print(time.perf_counter()-t1)
-        print(step)
+        # print(step)
 
         # validation part
         net.eval()

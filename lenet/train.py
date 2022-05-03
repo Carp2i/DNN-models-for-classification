@@ -1,5 +1,3 @@
-from cgi import test
-from tkinter import image_names
 import torch
 import torchvision
 import torch.nn as nn
@@ -31,17 +29,17 @@ test_image, test_label = test_data_iter.next()
 classes=('plane', 'car', 'bird', 'cat',
         'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
-# def imshow(img):
-#     img = img / 2 + 0.5     # unnormalize
-#     npimg = img.numpy()
-#     plt.imshow(np.transpose(npimg, (1, 2, 0)))
-#     plt.show()
+def imshow(img):
+    img = img / 2 + 0.5     # unnormalize
+    npimg = img.numpy()
+    plt.imshow(np.transpose(npimg, (1, 2, 0)))
+    plt.show()
 
 
-# # print labels
-# print(' '.join('%5s' % classes[test_label[j]] for j in range(4)))
-# # show images
-# imshow(torchvision.utils.make_grid(test_image))
+# print labels
+print(' '.join('%5s' % classes[test_label[j]] for j in range(4)))
+# show images
+imshow(torchvision.utils.make_grid(test_image))
 
 
 net = LeNet()

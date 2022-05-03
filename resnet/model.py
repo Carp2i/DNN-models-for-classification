@@ -150,6 +150,10 @@ class ResNet(nn.Module):
 
         return x
 
+def resnet18(num_classes=1000, include_top=True):
+    # https:
+    return ResNet(BasicBlock, [2, 2, 2, 2], num_classes=num_classes, include_top=include_top)
+
 
 def resnet34(num_classes=1000, include_top=True):
     # https://download.pytorch.org/models/resnet34-333f7ec4.pth
@@ -181,7 +185,7 @@ def resnext101_32x8d(num_classes=1000, include_top=True):
 
 
 if __name__ == '__main__':
-    model = resnext101_32x8d()
+    model = resnet18()
     print(model)
     # 很好用的，可以统计参数量的方法
     total = sum([param.nelement() for param in model.parameters()])
