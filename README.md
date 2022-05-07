@@ -1,9 +1,7 @@
 # DNN models for classification
-这个仓库是仓库作者用于托管练手模型的
+这个仓库是仓库作者用于托管练手模型的 
 
-学习的大佬仓库为： https://github.com/WZMIAOMIAO/deep-learning-for-image-processing
-
-仓库作者(我）还处于写pytorch的 **轮椅阶段**
+仓库作者还处于写pytorch的 **轮椅阶段**
 
 
 ## 目前已经更新
@@ -80,3 +78,7 @@ GoogLeNet：batch_size=96 **只用5.5GB**显存
 仓库的 root path 下有一个data文件夹，被我ignore了
 root下的split_data文件是用来处理 <u>**花分类数据**</u> 集的
 用于 shuffle 还有 split train/val dataset
+
+## reference
+
+https://github.com/WZMIAOMIAO/deep-learning-for-image-processing

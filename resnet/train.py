@@ -2,7 +2,6 @@ import os
 import sys
 import json
 
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -10,6 +9,8 @@ from torchvision import transforms, datasets
 from tqdm import tqdm
 
 from model import resnet34
+from torchvision.models import resnet
+
 
 def main():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -70,12 +71,6 @@ def main():
     net.load_state_dict(torch.load(model_weight_path, map_location='cpu'))
     # for param in net.parameters():
         # param.requires_grad = False
-    
-    # change fc layer structure
-    in_channel = net.fc.in_features
-    net.fc = nn.Linear(in_channel, 5)
-    net.to(device)
-
     # change fc layer structure
     in_channel = net.fc.in_features
     net.fc = nn.Linear(in_channel, 5)
